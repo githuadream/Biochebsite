@@ -1,0 +1,39 @@
+title: |
+  The World 
+  of 
+  Biochemistry
+description: |
+  "DNA is software, 
+  protein is hardware, 
+  and the environment is the operating system."
+email: chen-sq23@mails.tsinghua.edu.cn
+baseurl: "/biochem_atlas" # the subpath of your site, e.g. /blog
+#replace nrdybhu1.github.io with your domainname.com
+url: "https://githuadream.github.io" # the base hostname & protocol for your site
+markdown: kramdown
+page_excerpts: true
+favicon: "/img/symbol.png"
+collections:
+  compounds:
+    permalink: "/compound/:title/"
+    output: true
+  enzymes:
+    permalink: "/enzyme/:title/"
+    output: true
+defaults:
+- scope:
+    path: _compounds
+    type: compounds
+- scope:
+    path: ''
+  values:
+    image: "/img/overview.png"
+plugins:
+- jekyll-avatar
+- jekyll-feed
+- jekyll-redirect-from
+- jemoji
+- jekyll-paginate
+
+paginate: 5
+paginate_path: "/compounds/page-:num/"

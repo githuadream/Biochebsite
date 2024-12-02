@@ -1,0 +1,57 @@
+body{
+    overflow-x: scroll;
+}
+
+
+.pagination{
+    text-align: center;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 400px;
+    height: 100%;
+    background: #fefefe;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: $text-color;
+    z-index: 888;
+}
+
+.blog-post h3{
+    font-size: 10px;
+    opacity: 0.2;
+}
+
+.social-media ul{
+    list-style: none;
+}
+
+.social-media li{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.content{
+    position: relative;
+    left: 400px;
+    width: calc(100% - 400px);
+}
+
+a{
+    color: #bf52e0;
+    text-decoration: none;
+
+    &:hover{
+        color: $brand-color;
+        text-decoration: underline;
+    }
+}
+
+footer{
+    bottom: 0;
+    position: static;
+    text-align: center;
+}

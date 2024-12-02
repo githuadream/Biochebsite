@@ -1,0 +1,23 @@
+---
+layout: post
+title: Important Compounds
+---
+
+<div class="blog-post">
+    {% for compound in site.compounds %}
+    <h2><a href="{{ compound.url | prepend: site.baseurl | prepend: site.url }}">{{ compound.title }}</a><h2>
+    <h3><i class="fas fa-flask"></i> {{ compound.category}}</h3>
+    <p>{{ compound.excerpt }} <a href="{{ compound.url | absolute_url }}">[...]</a></p>
+    {% endfor -%}
+    <!-- {% for compound in paginator.compounds %}
+    <h2><a href="{{ compound.url | absolute_url }}">{{ compound.title }}</a></h2>
+    <p>{{ compound.excerpt }} <a href="{{ compound.url | absolute_url }}">[...]</a></p>
+    <pre>{{ compound | json }}</pre>
+    {% endfor %} -->
+    <!-- This loops through the paginated posts -->
+    <!-- {% for compound in paginator.compounds %}
+        <h2><a href="{{ compound.url | absolute_url }}">{{ compound.title }}</a><h2>
+        <h3><i class="fas fa-calendar-alt"></i> {{ compound.date | date_to_long_string }}</h3>
+        <p>{{ compound.excerpt }} <a href="{{ compound.url | absolute_url }}">[...]</a></p>
+    {% endfor %} -->
+</div>
